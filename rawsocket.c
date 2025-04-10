@@ -1,3 +1,5 @@
+//This RAW socket program will help you send spoofed packets towards a destination IP.
+//This also helps in generating ICMP based DDoS traffic.
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/socket.h>
