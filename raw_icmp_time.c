@@ -96,7 +96,7 @@ int main() {
 	    iph->frag_off = 0;
 	    iph->ttl = 255;
 	    iph->protocol = IPPROTO_ICMP;
-	    //iph->check = 0;
+	    //iph->check = 0;  //ignore IP checksum check
 	    iph->saddr = inet_addr(agents[i]); 
 	    iph->daddr = dest_addr.sin_addr.s_addr;
 	    //iph->check = checksum((unsigned short *) packet, sizeof(struct iphdr)+psize);
