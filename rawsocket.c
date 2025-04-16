@@ -93,7 +93,7 @@ int main() {
 	    icmph->code = 0;
 	    icmph->checksum = checksum((unsigned short *) icmph, sizeof(struct icmphdr));
 	  
-	    // Send packet
+	    // Send packet, payload not added in this. Add it if you want.
 	    if (sendto(sockfd, packet, sizeof(struct iphdr) + sizeof(struct icmphdr), 0,
 		       (struct sockaddr *) &dest_addr, sizeof(dest_addr)) < 0) {
 		perror("Send failed");
